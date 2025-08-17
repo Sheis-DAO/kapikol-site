@@ -1,0 +1,76 @@
+name: Test Build
+
+on:
+  # Runs on pull requests
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        
+      - name: Validate HTML files
+        run: |
+          # Check if all expected HTML files exist
+          for file in index.html about.html contacts.html news.html events.html; do
+            if [ ! -f "$file" ]; then
+              echo "Error: $file not found!"
+              exit 1
+            fi
+          done
+          echo "All HTML files found ✓"
+          
+      - name: Check directory structure
+        run: |
+          # Check if all required directories exist
+          for dir in css js img svg fonts video lottie sourcemaps; do
+            if [ ! -d "$dir" ]; then
+              echo "Error: Directory $dir not found!"
+              exit 1
+            fi
+          done
+          echo "All required directories found ✓"
+          
+      - name: Validate asset references
+        run: |
+          # Check for any remaining Template/ references
+          if grep -r "Template/" *.html; then
+            echo "Error: Found references to Template/ directory in HTML files!"
+            exit 1
+          fi
+          echo "No Template/ references found ✓"
+          
+      - name: Check for broken internal links
+        run: |
+          # Simple check for internal links
+          for file in *.html; do
+            echo "Checking links in $file..."
+            # Extract href and src attributes
+            grep -oE '(href|src)="[^"]*\.html"' "$file" | grep -oE '"[^"]*\.html"' | tr -d '"' | while read -r link; do
+              if [ ! -f "$link" ] && [[ ! "$link" =~ ^https?:// ]] && [ "$link" != "#" ]; then
+                echo "Warning: $link referenced in $file but file not found"
+              fi
+            done
+          done
+          
+      - name: Build test
+        run: |
+          # Create a test build
+          mkdir -p _test_build
+          
+          # Copy all files
+          cp -r *.html _test_build/
+          cp -r css _test_build/
+          cp -r js _test_build/
+          cp -r img _test_build/
+          cp -r svg _test_build/
+          cp -r fonts _test_build/
+          cp -r video _test_build/
+          cp -r lottie _test_build/
+          cp -r sourcemaps _test_build/
+          
+          echo "Test build completed successfully ✓"
