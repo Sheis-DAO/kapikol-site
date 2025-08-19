@@ -1,0 +1,63 @@
+<svg width="1164" height="1002" viewBox="0 0 1164 1002" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.3">
+<!-- Large abstract KK logo for background -->
+<!-- First K with geometric cuts - scaled up -->
+<path d="M150 100L150 1000L300 1000L300 650L500 850L650 1000L700 950L500 750L500 650L700 450L650 400L500 550L300 750L300 450L500 250L650 100L600 50L450 200L300 350L300 100L150 100Z" fill="url(#paint0_linear_kk_large)" />
+
+<!-- Second K with overlap effect - scaled up -->
+<path d="M600 200L600 900L750 900L750 700L900 850L1050 1000L1100 950L950 800L900 750L1100 550L1050 500L900 650L750 800L750 500L900 350L1050 200L1000 150L850 300L750 400L750 200L600 200Z" fill="url(#paint1_linear_kk_large)" opacity="0.9"/>
+
+<!-- Large accent geometric shapes -->
+<path d="M300 550L500 350L550 400L350 600L300 550Z" fill="url(#paint2_accent_kk_large)" opacity="0.4"/>
+<path d="M750 600L950 400L1000 450L800 650L750 600Z" fill="url(#paint3_accent_kk_large)" opacity="0.3"/>
+
+<!-- Connecting bridge -->
+<path d="M500 600L600 600L600 650L500 650L500 600Z" fill="url(#paint4_bridge_kk_large)" opacity="0.5"/>
+
+<!-- Additional decorative elements for background -->
+<circle cx="200" cy="200" r="50" fill="url(#paint5_circle_kk_large)" opacity="0.2"/>
+<circle cx="1000" cy="800" r="70" fill="url(#paint6_circle_kk_large)" opacity="0.15"/>
+<path d="M100 500L200 400L250 450L150 550L100 500Z" fill="url(#paint7_decor_kk_large)" opacity="0.2"/>
+<path d="M950 300L1050 200L1100 250L1000 350L950 300Z" fill="url(#paint8_decor_kk_large)" opacity="0.2"/>
+</g>
+<defs>
+<linearGradient id="paint0_linear_kk_large" x1="150" y1="100" x2="700" y2="1000" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="0.5" stop-color="#F5F5F5"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<linearGradient id="paint1_linear_kk_large" x1="600" y1="200" x2="1100" y2="1000" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F5F5F5"/>
+<stop offset="0.5" stop-color="#EEEEEE"/>
+<stop offset="1" stop-color="#D0D0D0"/>
+</linearGradient>
+<linearGradient id="paint2_accent_kk_large" x1="300" y1="350" x2="550" y2="600" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<linearGradient id="paint3_accent_kk_large" x1="750" y1="400" x2="1000" y2="650" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EEEEEE"/>
+<stop offset="1" stop-color="#C0C0C0"/>
+</linearGradient>
+<linearGradient id="paint4_bridge_kk_large" x1="500" y1="600" x2="600" y2="650" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F5F5F5"/>
+<stop offset="1" stop-color="#D0D0D0"/>
+</linearGradient>
+<linearGradient id="paint5_circle_kk_large" x1="150" y1="150" x2="250" y2="250" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#E8E8E8"/>
+</linearGradient>
+<linearGradient id="paint6_circle_kk_large" x1="930" y1="730" x2="1070" y2="870" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F0F0F0"/>
+<stop offset="1" stop-color="#D0D0D0"/>
+</linearGradient>
+<linearGradient id="paint7_decor_kk_large" x1="100" y1="400" x2="250" y2="550" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFFFFF"/>
+<stop offset="1" stop-color="#E0E0E0"/>
+</linearGradient>
+<linearGradient id="paint8_decor_kk_large" x1="950" y1="200" x2="1100" y2="350" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F8F8F8"/>
+<stop offset="1" stop-color="#D8D8D8"/>
+</linearGradient>
+</defs>
+</svg>

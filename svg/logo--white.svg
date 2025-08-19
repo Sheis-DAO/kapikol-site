@@ -1,16 +1,84 @@
-<svg width="1164" height="1002" viewBox="0 0 1164 1002" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.3">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M1111.02 278.422C1049.94 341.093 955.491 393.885 955.491 393.885L1061.53 450.429V752.08L889.522 848.699L891.869 554.135L314.537 226.582C314.537 226.582 388.063 182.904 479.489 132.323C537.647 100.148 603.367 62.3015 660.937 40.4158C784.973 -6.7436 922.251 -2.82355 962.561 5.06881C1105.75 33.1031 1152.36 108.751 1160.5 158.243C1171.29 223.784 1149.75 238.685 1111.02 278.422ZM849.452 693.168V869.908L686.857 968.88L684.508 810.995L140.16 490.509L321.607 382.109L849.452 693.168ZM684.508 968.881L524.797 1067.33L512.486 1074.92L-46 754.437L142.516 648.394L684.508 968.881ZM651.529 204.519C654.422 202.706 713.79 156.357 780.738 137.623C811.107 129.13 877.512 120.896 909.945 161.514C940.651 199.969 921.701 222.924 859.697 261.856C838.11 275.151 815.735 287.119 792.696 297.692C799.875 292.591 651.529 204.519 651.529 204.519Z" fill="url(#paint0_linear_0_481)"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M893.036 846.079L895.38 550.68L1061.74 456.901V749.968L893.036 846.079ZM691.533 963.314L689.189 808.581L853.196 696.038L850.852 864.838L691.533 963.314Z" fill="url(#paint1_linear_0_481)"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear_0_481" x1="1163.27" y1="1074.9" x2="1163.27" y2="0.229309" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F3F3F3"/>
-<stop offset="1" stop-color="white"/>
-</linearGradient>
-<linearGradient id="paint1_linear_0_481" x1="1061.75" y1="963.314" x2="1061.75" y2="456.901" gradientUnits="userSpaceOnUse">
-<stop stop-color="white"/>
-<stop offset="1" stop-color="white"/>
-</linearGradient>
-</defs>
+<svg width="100%" height="100%" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- 3D gradients for white version -->
+        <linearGradient id="gradient_3d_main_w" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+            <stop offset="40%" style="stop-color:#F0F0F0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#D0D0D0;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="gradient_3d_side_w" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#E0E0E0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#C0C0C0;stop-opacity:1" />
+        </linearGradient>
+        <linearGradient id="gradient_3d_small_w" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#F8F8F8;stop-opacity:1" />
+            <stop offset="40%" style="stop-color:#E8E8E8;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#C8C8C8;stop-opacity:1" />
+        </linearGradient>
+        <!-- Glow effect for white on dark -->
+        <filter id="glow_effect" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+            <feOffset dx="0" dy="0" result="offsetblur"/>
+            <feFlood flood-color="#FFFFFF" flood-opacity="0.3"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <!-- Drop shadow for depth -->
+        <filter id="drop_shadow_w" x="-50%" y="-50%" width="200%" height="200%">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+            <feOffset dx="2" dy="2" result="offsetblur"/>
+            <feFlood flood-color="#000000" flood-opacity="0.15"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    
+    <g transform="translate(29, 29) rotate(45) translate(-29, -29)">
+        <!-- Large K shadow base -->
+        <g opacity="0.1" transform="translate(3, 3)">
+            <path d="M10 8L10 40L16 40L16 26L24 34L30 28L24 22L30 16L24 10L16 18L16 8L10 8Z" 
+                  fill="#000000"/>
+        </g>
+        
+        <!-- Large K - 3D sides -->
+        <path d="M14 8L10 12L10 44L14 40L14 26L22 34L28 28L24 32L30 26L24 20L30 14L24 20L28 16L22 10L16 16L14 18L14 8Z" 
+              fill="url(#gradient_3d_side_w)"/>
+        
+        <!-- Large K - main face -->
+        <path d="M10 8L10 40L16 40L16 26L24 34L30 28L24 22L30 16L24 10L16 18L16 8L10 8Z" 
+              fill="url(#gradient_3d_main_w)"
+              filter="url(#glow_effect)"/>
+        
+        <!-- Large K - highlight edge -->
+        <path d="M10 8L16 8L16 18L24 10L26 12L18 20L26 28L24 30L16 22L16 40L14 40L14 24L22 32L28 26L22 20L28 14L22 20L14 12L14 10L10 8Z" 
+              fill="#FFFFFF" 
+              opacity="0.5"/>
+        
+        <!-- Small K shadow base -->
+        <g opacity="0.08" transform="translate(2, 2)">
+            <path d="M28 16L28 32L32 32L32 24L36 28L40 24L36 20L40 16L36 12L32 16L32 16L28 16Z" 
+                  fill="#000000"/>
+        </g>
+        
+        <!-- Small K - 3D sides -->
+        <path d="M31 16L28 19L28 35L31 32L31 24L35 28L39 24L36 27L40 23L36 19L40 15L36 19L39 16L35 12L31 16L31 16Z" 
+              fill="url(#gradient_3d_side_w)" 
+              opacity="0.9"/>
+        
+        <!-- Small K - main face -->
+        <path d="M28 16L28 32L32 32L32 24L36 28L40 24L36 20L40 16L36 12L32 16L32 16L28 16Z" 
+              fill="url(#gradient_3d_small_w)"
+              filter="url(#glow_effect)"/>
+        
+        <!-- Small K - highlight edge -->
+        <path d="M28 16L32 16L32 16L36 12L37 13L33 17L37 21L36 22L32 18L32 32L31 32L31 25L35 29L39 25L35 21L39 17L35 21L31 17L31 17L28 16Z" 
+              fill="#FFFFFF" 
+              opacity="0.4"/>
+    </g>
 </svg>
