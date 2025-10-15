@@ -1,0 +1,32 @@
+/**
+ * Custom styles for Kapikol
+ * Overrides for the Upcreators template
+ **/
+
+/* Make brand logos bigger */
+.brands_list-row img {
+    max-height: 120px !important;
+}
+
+/* Reduce padding after brands section */
+.brands.section {
+    padding-bottom: 40px !important;
+}
+
+/* Responsive adjustments for tablets and up */
+@media screen and (min-width: 767.98px) {
+    .brands_list-row img {
+        max-height: 140px !important;
+    }
+}
+
+/* Responsive adjustments for desktop */
+@media screen and (min-width: 1023.98px) {
+    .brands_list-row img {
+        max-height: 160px !important;
+    }
+
+    .brands.section {
+        padding-bottom: 50px !important;
+    }
+}
